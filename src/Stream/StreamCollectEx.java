@@ -31,8 +31,26 @@ public class StreamCollectEx {
             return elem;
         })
                 .collect(Collectors.groupingBy(el->el.getId()));//collect вернет Map
+        //пара ключ-значение <Integer,List<Employee>>
         // ,который содержит integer, как ключ; как значение - лист студентов
 
         System.out.println(map);
+
+        for(Map.Entry<Integer,List<Employee>> entry: map.entrySet()){
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+
+        Map<Boolean,List<Employee>> dividedEmps = employees.stream().collect(Collectors.
+                partitioningBy(e->e.getSalary()>1500000));//в данном случае ключём будет boolean
+        //Map<Boolean,List<Employees>> //разделяет пополам: true и false
+
+
+        System.out.println("==============================");
+
+        for(Map.Entry<Boolean,List<Employee>> entry: dividedEmps.entrySet()){
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+
+
     }
 }
