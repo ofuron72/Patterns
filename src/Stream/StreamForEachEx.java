@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 public class StreamForEachEx {
     public static void main(String[] args) {
         //forEach не возвращает ничего, поэтому нельзя превратить во что-нибудь
+        //forEach() - terminal method
 
         int[] array = {3,9,6,8,4};
 
@@ -17,9 +18,9 @@ public class StreamForEachEx {
 
         List<Employee> employees= new ArrayList<>();
         Employee emp1 = new Employee(1,"Jeff","Bessos",1000000);
-        Employee emp2 = new Employee(1,"Warrent","Buffet",2000000);
-        Employee emp3 = new Employee(1,"Frank","Ebigneil",34000000);
-        Employee emp4 = new Employee(1,"Steve","Madden",80000);
+        Employee emp2 = new Employee(2,"Warrent","Buffet",2000000);
+        Employee emp3 = new Employee(4,"Frank","Ebigneil",34000000);
+        Employee emp4 = new Employee(3,"Steve","Madden",80000);
 
         employees.add(emp1);
         employees.add(emp2);

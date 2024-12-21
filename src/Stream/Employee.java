@@ -8,11 +8,8 @@ Comparator используется для сравнения объектов, 
 public class Employee implements Comparable<Employee>{
     @Override
     public int compareTo(Employee o) {
-       int res = this.name.compareTo(o.name);
-       if (res==0) {
-           res = this.surname.compareTo(o.surname);
-       }
-       return  res;
+
+       return  o.salary-this.salary;
     }/*
     мы сравниваем текущий объект который мы создадим с объектом в параметре этого метода, и должны вернуть число
     если текущий объект больше объекта в параметре, то вернем положительное
@@ -22,6 +19,39 @@ public class Employee implements Comparable<Employee>{
 
     int id;
     String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     String surname;
     int salary;
 

@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 public class StreamMapEx1 {
     public static void main(String[] args) {
+        //map - intermediate method
         List<String> list = new ArrayList<>();
         list.add("Dollar");
         list.add("Euro");
@@ -15,10 +16,6 @@ public class StreamMapEx1 {
         System.out.println(list);
 
         //получаем лист длин строк
-
-//        for (int i =0; i< list.size(); i++){
-//            list.set(i, String.valueOf(list.get(i).length()));
-//        } Реализация без stream
 
         //Эти методы будут работать не напрямую с массивами или коллекциями,
         //а преобразуют их в потоки
